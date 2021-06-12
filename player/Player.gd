@@ -37,7 +37,8 @@ func change_animation():
 func _physics_process(delta):
 	# reset horizontal velocity
 	velocity.x = 0
-	
+	if self.position.y >= 270:
+		self.position = Vector2.ZERO
 	# set horizontal velocity
 	if Input.is_action_pressed("move_right"):
 		velocity.x += move_speed
