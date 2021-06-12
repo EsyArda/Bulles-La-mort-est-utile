@@ -1,16 +1,12 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Tilesets/paysage/Tilesets/Tileset Morning.png" type="Texture" id=3]
 [ext_resource path="res://Tilesets/paysage/Forest/Layer 1.png" type="Texture" id=4]
 [ext_resource path="res://Tilesets/paysage/Forest/Layer 2.png" type="Texture" id=5]
 [ext_resource path="res://Tilesets/paysage/Forest/Layer 5.png" type="Texture" id=6]
 [ext_resource path="res://Tilesets/paysage/Forest/Layer 3.png" type="Texture" id=7]
 [ext_resource path="res://Tilesets/paysage/Forest/Layer 4.png" type="Texture" id=8]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -201,55 +197,8 @@ current = true
 limit_top = -100
 limit_bottom = 100
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-mode = 1
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D"]
-position = Vector2( 257, 193 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2( 257, 193 )
-shape = SubResource( 1 )
-
-[node name="RigidBody2D4" type="RigidBody2D" parent="."]
-position = Vector2( -172, -29 )
-mode = 1
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D4"]
-position = Vector2( 268, 225 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
-position = Vector2( 268, 225 )
-shape = SubResource( 1 )
-
-[node name="RigidBody2D3" type="RigidBody2D" parent="."]
-position = Vector2( -98, 3 )
-mode = 1
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D3"]
-position = Vector2( 257, 193 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
-position = Vector2( 257, 193 )
-shape = SubResource( 1 )
-
-[node name="RigidBody2D2" type="RigidBody2D" parent="."]
-mode = 1
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D2"]
-position = Vector2( 357, 171 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
-position = Vector2( 357, 171 )
-shape = SubResource( 1 )
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 14 )
 cell_size = Vector2( 32, 32 )
-show_collision = true
 format = 1
 tile_data = PoolIntArray( 131071, 0, 0, 65536, 0, 1, 65537, 0, 2, 65544, 0, 0, 65545, 0, 1, 65546, 0, 2, 196607, 0, 131072, 131072, 0, 65542, 131073, 0, 131077, 131074, 0, 2, 131080, 0, 131072, 131081, 0, 131073, 131082, 0, 131074, 131086, 0, 1, 131087, 0, 1, 131088, 0, 1, 131089, 0, 1, 131090, 0, 1, 131091, 0, 1, 262140, 0, 0, 262141, 0, 2, 196608, 0, 65536, 196609, 0, 65537, 196610, 0, 131077, 196611, 0, 2, 196630, 0, 1, 327674, 0, 0, 327675, 0, 1, 327676, 0, 131078, 327677, 0, 65538, 262144, 0, 65536, 262145, 0, 65541, 262146, 0, 131073, 262147, 0, 131074, 262148, 0, 1, 262149, 0, 1, 262150, 0, 1, 262165, 0, 1, 393210, 0, 131072, 393211, 0, 131073, 393212, 0, 65542, 393213, 0, 131077, 393214, 0, 1, 393215, 0, 1, 327680, 0, 131078, 327681, 0, 65538, 327692, 0, 1, 327693, 0, 1, 327700, 0, 1, 458748, 0, 65536, 458749, 0, 65537, 458750, 0, 65541, 458751, 0, 131073, 393216, 0, 131073, 393217, 0, 131074, 393235, 0, 1, 524284, 0, 131072, 524285, 0, 131073, 524286, 0, 131074, 458769, 0, 1, 458770, 0, 1, 458771, 0, 1, 458772, 0, 1, 458773, 0, 1, 589840, 0, 1, 720883, 0, 1, 655375, 0, 1, 655376, 0, 1, 786420, 0, 1, 786421, 0, 1, 786428, 0, 1, 786429, 0, 1, 786430, 0, 1, 786431, 0, 1, 720896, 0, 1, 720897, 0, 1, 720898, 0, 1, 720899, 0, 1, 720900, 0, 1, 720901, 0, 1, 720902, 0, 1, 720903, 0, 1, 720904, 0, 1, 720910, 0, 1, 720911, 0, 1, 851958, 0, 1, 851959, 0, 1, 851960, 0, 1, 851961, 0, 1, 851962, 0, 1, 851963, 0, 1, 786441, 0, 1, 786442, 0, 1, 786443, 0, 1, 786444, 0, 1, 786445, 0, 1 )
