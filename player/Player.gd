@@ -17,8 +17,22 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	change_animation()
+
+func change_animation():
+	# face left or right
+	if velocity.x > 0:
+		$AnimatedSprite.flip_h = false
+	elif velocity.x < 0:
+		$AnimatedSprite.flip_h = true
+	if velocity.y < 0:
+		$AnimatedSprite.play("jump")
+	else:
+		if velocity.x != 0:
+			$AnimatedSprite.play("run")
+		else:
+			$AnimatedSprite.play("idle")
 
 func _physics_process(delta):
 	# reset horizontal velocity
