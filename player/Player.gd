@@ -8,6 +8,8 @@ export var move_speed := 100
 export var gravity := 2000
 export var jump_speed := 550
 
+export var last_floor_level := 0
+
 var velocity := Vector2.ZERO
 
 
@@ -37,14 +39,18 @@ func change_animation():
 func _physics_process(delta):
 	# reset horizontal velocity
 	velocity.x = 0
-	if self.position.y >= 270:
-		self.position = Vector2.ZERO
+	if self.is_on_floor():
+		last_floor_level = self.position.x
+	
+	if position.y >= 270:
+		 dies()
+		 position = Vector2.ZERO
 	# set horizontal velocity
+	
 	if Input.is_action_pressed("move_right"):
 		velocity.x += move_speed
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= move_speed
-	
 	# Apply gravity -> downward velocity
 	velocity.y += gravity * delta
 	
@@ -53,5 +59,11 @@ func _physics_process(delta):
 		if is_on_floor():
 			velocity.y = -jump_speed
 	
+	
 	# move player
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+func dies():
+	var bulle = load("res://bulle_Plateforme.tscn")
+	var plateforme = bulle.instance()
+	add_child_below_node(get_tree().get_root().get_node("Game"),plateforme)
