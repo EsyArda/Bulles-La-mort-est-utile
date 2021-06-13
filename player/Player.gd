@@ -58,8 +58,9 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	
 	# jump on the next frame
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
+			$JumpSound.play()
 			velocity.y = -jump_speed
 	
 	
@@ -67,6 +68,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func dies():
+	$DeathSound.play()
 	deaths +=1
 	spawn_platform.x = 0.25 * spawn_platform.x + 0.75* self.position.x
 	get_parent().add_Bulle(spawn_platform)
