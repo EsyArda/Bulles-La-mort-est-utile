@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game.gd" type="Script" id=2]
 [ext_resource path="res://Assets/paysage/Tilesets/Tileset Morning.png" type="Texture" id=3]
 [ext_resource path="res://Assets/paysage/Forest/Layer 1.png" type="Texture" id=4]
 [ext_resource path="res://Assets/paysage/Forest/Layer 2.png" type="Texture" id=5]
@@ -143,6 +144,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [node name="Game" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

@@ -148,7 +148,6 @@ shape = SubResource( 1 )
 position = Vector2( -1, 0 )
 frames = SubResource( 29 )
 animation = "run"
-frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
