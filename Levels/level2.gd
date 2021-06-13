@@ -1,6 +1,6 @@
 extends "res://Game.gd"
 
-export var  spawn_player := Vector2(-230,110)
+export var  spawn_player := Vector2(-220,176)
 const next_level := "res://levels/level1.tscn"
 # Declare member variables here. Examples:
 # var a = 2
