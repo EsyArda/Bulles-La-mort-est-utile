@@ -16,4 +16,5 @@ func _ready():
 
 
 func _on_Goal_body_entered(body):
+	$CoinSound.play()
 	get_parent().change_level(get_parent().next_level)
