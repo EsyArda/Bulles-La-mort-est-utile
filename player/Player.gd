@@ -11,7 +11,7 @@ export var jump_speed := 550
 export var spawn_platform = Vector2.ZERO
 export var spawn_character = Vector2.ZERO
 
-export var last_floor_level := 0
+export var deaths :=0
 
 var velocity := Vector2.ZERO
 
@@ -67,7 +67,9 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func dies():
+	deaths +=1
 	spawn_platform.x = 0.25 * spawn_platform.x + 0.75* self.position.x
 	get_parent().add_Bulle(spawn_platform)
 	position = spawn_character
+	Events.emit_signal("score_changed",deaths)
 	

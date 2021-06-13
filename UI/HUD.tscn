@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/1980 dynamic_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/HUD.gd" type="Script" id=2]
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainerDth" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="HBoxContainerDth" type="HBoxContainer" parent="MarginContainer/VBoxContainerDth"]
+margin_right = 480.0
+margin_bottom = 56.0
+
+[node name="Deaths" type="Label" parent="MarginContainer/VBoxContainerDth/HBoxContainerDth"]
+margin_right = 140.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 1 )
+text = "Deaths"
+align = 1
+valign = 2

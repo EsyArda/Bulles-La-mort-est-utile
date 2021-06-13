@@ -18,6 +18,10 @@ config/name="La mort est utile | Les bulles"
 run/main_scene="res://Main menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Events="*res://autoloads/events.gd"
+
 [display]
 
 window/size/width=480
