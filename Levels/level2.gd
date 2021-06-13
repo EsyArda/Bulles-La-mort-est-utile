@@ -1,6 +1,7 @@
-extends Node2D
+extends "res://Game.gd"
 
-
+export var  spawn_player := Vector2(-230,110)
+const next_level := "res://levels/level1.tscn"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -10,14 +11,7 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-func add_Bulle(pos):
-	var bulle = load("res://Controller/bulle_Plateforme.tscn").instance()
-	add_child(bulle)
-	bulle.position = pos
-	print(bulle.position)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-func change_level(lvl):
-	get_parent().add_child(load(lvl).instance())
-	queue_free()
