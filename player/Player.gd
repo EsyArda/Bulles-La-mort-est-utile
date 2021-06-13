@@ -42,8 +42,8 @@ func _physics_process(delta):
 	# reset horizontal velocity
 	velocity.x = 0
 	if self.is_on_floor():
-		spawn_platform.y = self.position.y +21
-		spawn_platform.x = self.position.x
+		spawn_platform.y = int(self.position.y +26)
+		spawn_platform.x = int(self.position.x)
 	
 	if position.y >= 270:
 		 dies()
