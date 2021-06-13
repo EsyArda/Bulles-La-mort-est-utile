@@ -9,6 +9,7 @@ export var gravity := 2000
 export var jump_speed := 550
 
 export var spawn_platform = Vector2.ZERO
+export var spawn_character = Vector2.ZERO
 
 export var last_floor_level := 0
 
@@ -17,7 +18,7 @@ var velocity := Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	spawn_character= get_parent().spawn_player
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,7 +48,6 @@ func _physics_process(delta):
 	
 	if position.y >= 270:
 		 dies()
-		 position = Vector2.ZERO
 	# set horizontal velocity
 	
 	if Input.is_action_pressed("move_right"):
@@ -68,4 +68,6 @@ func _physics_process(delta):
 
 func dies():
 	spawn_platform.x = 0.25 * spawn_platform.x + 0.75* self.position.x
-	get_node("/root/Game").add_Bulle(spawn_platform)
+	get_parent().add_Bulle(spawn_platform)
+	position = spawn_character
+	
