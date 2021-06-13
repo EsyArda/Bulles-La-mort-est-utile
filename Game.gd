@@ -21,3 +21,9 @@ func add_Bulle(pos):
 func change_level(lvl):
 	get_parent().add_child(load(lvl).instance())
 	queue_free()
+	
+func boost():
+	get_child(2).move_speed *=2
+	
+func slowDown():
+	get_child(2).move_speed /=2

@@ -1,8 +1,6 @@
-extends "res://Game.gd"
+extends Area2D
 
-const level_Name  := "Level 1"
-export var  spawn_player := Vector2(-220,176)
-const next_level := "res://levels/level3.tscn"
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -16,3 +14,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+
+
+func _on_zone_bulle_body_entered(body):
+	get_parent().boost()
+
+
+func _on_zone_bulle_body_exited(body):
+	get_parent().slowDown()
+	# Replace with function body.

@@ -4,9 +4,9 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 
-export var move_speed := 100
-export var gravity := 2000
-export var jump_speed := 550
+export var move_speed := 200
+export var gravity := 500
+export var jump_speed := 100
 
 export var spawn_platform = Vector2.ZERO
 export var spawn_character = Vector2.ZERO
