@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Fonts/1980 dynamic_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Main menu.gd" type="Script" id=2]
 [ext_resource path="res://Assets/paysage/Field Night.png" type="Texture" id=3]
+[ext_resource path="res://Music and Sounds/Music/Abstraction - Three Red Hearts - Three Red Hearts.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Fonts/1980v202005.ttf"
@@ -39,19 +40,19 @@ margin_right = 480.0
 margin_bottom = 270.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 172.0
+margin_left = 78.0
 margin_top = 33.0
-margin_right = 308.0
+margin_right = 401.0
 margin_bottom = 237.0
 custom_constants/separation = 20
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 136.0
+margin_right = 323.0
 margin_bottom = 56.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_left = 8.0
-margin_right = 128.0
+margin_left = 101.0
+margin_right = 221.0
 margin_bottom = 56.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 0.588235 )
@@ -59,12 +60,12 @@ text = "Bulles"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 76.0
-margin_right = 136.0
+margin_right = 323.0
 margin_bottom = 136.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
-margin_left = 26.0
-margin_right = 110.0
+margin_left = 119.0
+margin_right = 203.0
 margin_bottom = 60.0
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
@@ -120,13 +121,20 @@ text = "Exit"
 
 [node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 156.0
-margin_right = 136.0
+margin_right = 323.0
 margin_bottom = 204.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3"]
-margin_right = 136.0
+margin_right = 323.0
 margin_bottom = 48.0
 custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.588235 )
 text = "Game by Baptiste & Lilian
-Graphics by Edermunizz
-Font by Void"
+Graphics by Edermunizz | Font by Void
+Music by Abstraction : http://www.abstractionmusic.com/"
+align = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true

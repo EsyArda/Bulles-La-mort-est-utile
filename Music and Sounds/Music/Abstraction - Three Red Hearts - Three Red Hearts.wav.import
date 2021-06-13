@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Abstraction - Three Red Hearts - Three Red Hearts.wav-d5cb9b2d1fa754d6d095ba0ae75aaed8.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/Music/Abstraction - Three Red Hearts - Three Red Hearts.wav"
+dest_files=[ "res://.import/Abstraction - Three Red Hearts - Three Red Hearts.wav-d5cb9b2d1fa754d6d095ba0ae75aaed8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
