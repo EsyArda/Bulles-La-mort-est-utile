@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/paysage/Forest/Layer 3.png" type="Texture" id=1]
 [ext_resource path="res://Assets/paysage/Forest/Layer 4.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Controller/zone_bulle.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Levels/level4.gd" type="Script" id=11]
+[ext_resource path="res://Music and Sounds/Music/Abstraction - Three Red Hearts - Box Jump.wav" type="AudioStream" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -407,3 +408,8 @@ tile_data = PoolIntArray( -65514, 0, 0, -65513, 0, 2, 8, 0, 3, 22, 0, 65540, 23,
 
 [node name="zone_bulle5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 839.214, 89.8425 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -10.0
+autoplay = true
