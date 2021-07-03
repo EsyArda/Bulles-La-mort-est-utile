@@ -1,6 +1,6 @@
 extends MarginContainer
 
-const first_scene = preload("res://levels/level1.tscn")
+const first_scene = preload("res://Levels/level1.tscn")
 
 
 onready var selector_one := $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector
