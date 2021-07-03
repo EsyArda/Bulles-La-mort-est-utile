@@ -15,7 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="La mort est utile | Les bulles"
+config/name="Bulles"
+config/description="2D plateformer with a lot of bubles"
 run/main_scene="res://Main menu.tscn"
 config/icon="res://icon.png"
 
